@@ -33,7 +33,7 @@ export function RoleSwitcher({ currentRole }: RoleSwitcherProps) {
           {currentRole === "teacher" && <BookOpen className="mr-2 h-4 w-4" />}
           {currentRole === "student" && <Users className="mr-2 h-4 w-4" />}
           {currentRole === "parent" && <Users className="mr-2 h-4 w-4" />}
-          {currentRole.charAt(0).toUpperCase() + currentRole.slice(1)} View
+          {currentRole ? currentRole.charAt(0).toUpperCase() + currentRole.slice(1) : "User"} View
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
